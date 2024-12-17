@@ -1,0 +1,120 @@
+/* Navbar.css */
+
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 20px;
+    /* background-color: #f1f2f4; */
+    color: rgb(0, 0, 0);
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    width: 100%;
+    z-index: 1000;
+    /* box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    box-sizing: border-box; */
+}
+
+.navbar-logo {
+    display: flex;
+    align-items: center;
+}
+
+.navbar-logo img {
+    height: 40px;
+    margin-right: 10px;
+}
+
+.navbar-links {
+    display: flex;
+    gap: 10px;
+    align-items: flex-start;
+    padding-right: 100%;
+}
+
+.navbar-link a {
+    color: rgb(12, 12, 12);
+    text-decoration: none;
+    transition: color 0.3s;
+}
+
+.navbar-link a:hover {
+    color: #007bff; /* Accent color for hover */
+}
+
+.dropdown {
+    position: relative;
+    cursor: pointer;
+}
+
+.dropdown-menu {
+    position: absolute;
+    top: 100%;
+    left: 0;
+    background-color: white;
+    color: black;
+    border: 1px solid #ddd;
+    padding: 10px;
+    display: none; /* Initially hidden */
+    flex-direction: column;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+    border-radius: 5px;
+    min-width: 150px;
+    padding-right: 10%;
+}
+
+.dropdown:hover .dropdown-menu,
+.navbar-link.dropdown span:hover + .dropdown-menu {
+    display: flex; /* Show dropdown on hover */
+}
+
+.dropdown-menu a {
+    color: black;
+    text-decoration: none;
+    padding: 10px;
+    transition: background-color 0.3s;
+}
+
+.dropdown-menu a:hover {
+    background-color: #f1f1f1; /* Light grey background for hover */
+}
+
+/* Navbar Toggle Button */
+.navbar-toggle {
+    display: none;
+    background: none;
+    border: none;
+    font-size: 2rem;
+    cursor: pointer;
+}
+
+/* Mobile Responsive Styles */
+@media (max-width: 768px) {
+    .navbar-toggle {
+        display: block; /* Show the toggle button on mobile */
+        color: rgb(0, 0, 0);
+    }
+
+    .navbar-links {
+        display: none; /* Hide the links initially on mobile */
+        position: absolute;
+        top: 60px;
+        right: 20px;
+        background-color: #f1f2f4;
+        border-radius: 8px;
+        padding: 15px;
+        box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    .navbar-links.open {
+        display: flex; /* Show links when toggle button is clicked */
+    }
+
+    .navbar-link {
+        margin: 10px 0;
+    }
+}
