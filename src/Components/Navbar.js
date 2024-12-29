@@ -17,7 +17,7 @@ function Navbar() {
         <header className="navbar">
             <div className="navbar-logo">
                 <img src={Logo} alt="Logo" />
-                <span>EDGE</span>
+                <span>Modern Blurprint</span>
             </div>
             <nav>
                 <ul className="navbar-links">
