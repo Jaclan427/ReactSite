@@ -1,88 +1,64 @@
-/* Hero Section */
+/* Hero Section Styles */
 .hero {
-    display: flex;
-    align-items: flex-start;
-    justify-content: center;
+    background-color: #000; /* Black background */
+    color: #fff; /* White text */
     height: 100vh; /* Full viewport height */
-    background-size: cover; /* Ensure the image covers the entire section */
-    background-position: center; /* Center the background image */
-    background-repeat: no-repeat;
-    text-align: center;
-    color: white;
-    padding: 10px;
-    overflow: visible
-    
+    display: flex;
+    align-items: center;
+    padding: 2rem;
 }
 
-
-/* Hero Content */
-.hero-content {
-    max-width: 800px;
-    padding: 20px;
-    border-radius: 10px;
-    overflow: visible;
-    z-index: 10; /* Ensure it appears above other elements */
-    padding-top: 10%;
+/* Left Section */
+.hero-left {
+    flex: 1; /* Take up equal space with right */
+    padding-right: 2rem;
 }
 
-
-.hero h1 {
-    font-size: 2.5em;
-    margin-bottom: 10px;
-    color: #fff;
+.hero-left h1 {
+    font-size: 3rem;
+    font-weight: bold;
+    margin-bottom: 1rem;
+    color: #fff; /* Bold white text */
 }
 
-.hero p {
-    font-size: 1.2em;
-    margin-bottom: 20px;
-    color: #ddd;
+.hero-left p {
+    font-size: 1.2rem;
+    margin-bottom: 2rem;
+    color: #ddd; /* Light gray for contrast */
 }
 
-/* Transparent Button Styles */
-.hero-buttons .btn-primary,
-.hero-buttons .btn-secondary {
-    margin: 10px;
-    padding: 10px 20px;
-    font-size: 16px;
-    border: 2px solid white; /* Outline for visibility */
+.hero-buttons {
+    display: flex;
+    gap: 1rem; /* Space between buttons */
+}
+
+.btn-primary {
+    background-color: #ffd700; /* Gold-yellow background */
+    color: #000; /* Black text */
+    border: none;
+    padding: 0.7rem 1.5rem;
+    font-size: 1rem;
+    font-weight: bold;
     border-radius: 5px;
-    background-color: transparent; /* Transparent background */
-    color: white; /* Text color */
     cursor: pointer;
-    transition: background-color 0.3s ease, color 0.3s ease;
+    transition: background-color 0.3s ease, transform 0.2s ease;
 }
 
-/* Hover Effect for Primary Button */
-.hero-buttons .btn-primary:hover {
-    background-color: #007BFF; /* Solid blue on hover */
-    color: white;
-    border-color: #007BFF; /* Match border to background */
+.btn-primary:hover {
+    background-color: #e5c100; /* Slightly darker gold on hover */
+    transform: scale(1.05); /* Slight zoom effect */
 }
 
-/* Hover Effect for Secondary Button */
-.hero-buttons .btn-secondary:hover {
-    background-color: #ddd; /* Light gray on hover */
-    color: #007BFF; /* Blue text on hover */
-    border-color: #ddd; /* Match border to background */
+/* Right Section */
+.hero-right {
+    flex: 1; /* Take up equal space with left */
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
-
-/* Responsive Design */
-@media (max-width: 768px) {
-    .hero {
-        height: auto;
-        padding: 40px 20px;
-    }
-
-    .hero-content {
-        max-width: 90%;
-    }
-
-    .hero h1 {
-        font-size: 2em;
-    }
-
-    .hero p {
-        font-size: 1em;
-    }
+.hero-right img {
+    max-height: 400px; /* Adjust based on design */
+    width: auto;
+    border-radius: 10px; /* Optional rounded corners */
 }
