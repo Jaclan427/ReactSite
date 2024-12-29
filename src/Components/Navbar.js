@@ -7,7 +7,11 @@ function Navbar() {
         <header className="navbar">
             <div className="navbar-logo">
                 <img src={Logo} alt="Logo" />
+<<<<<<< HEAD
                 <span>Edge</span>
+=======
+                <span>Modern Blurprint</span>
+>>>>>>> eee6f0e3ed74b0ce3fefb22b9141a68ae628d631
             </div>
             <nav>
                 <ul className="navbar-links">
