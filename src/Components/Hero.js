@@ -12,7 +12,7 @@ import TypingEffect from './TypingEffect';
             style={{ backgroundImage: `url(${Tampa})` }}
         >
             <div className="hero-content">
-//                //<TypingEffect words={words} typingSpeed={150} deletingSpeed={100} pauseTime={1000} />
+//<TypingEffect words={words} typingSpeed={150} deletingSpeed={100} pauseTime={1000} />
                 <p>Revolutionize the way you do business with AI-powered solutions.</p>
                 <div className="hero-buttons">
                     <button className="btn-primary">Get Started</button>
