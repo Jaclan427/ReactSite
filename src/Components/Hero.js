@@ -1,22 +1,23 @@
 import React from 'react';
 import './Hero.css';
+import Tampa from './Assets/Tampa.jpeg';
+import TypingEffect from './TypingEffect';
 
 function Hero() {
+    const words = ['developer', 'plumber', 'artist', 'designer']; // Words to shuffle through
+
     return (
-        <section className="hero">
-            <div className="hero-left">
-                <h1>Modern Websites for Visionary Businesses.</h1>
-                <p>Innovative designs tailored to elevate your online presence.</p>
+        <section
+            className="hero"
+            style={{ backgroundImage: `url(${Tampa})` }}
+        >
+            <div className="hero-content">
+                <TypingEffect words={words} typingSpeed={150} deletingSpeed={100} pauseTime={1000} />
+                <p>Revolutionize the way you do business with AI-powered solutions.</p>
                 <div className="hero-buttons">
                     <button className="btn-primary">Get Started</button>
-                    <button className="btn-primary">Learn More</button>
+                    <button className="btn-secondary">Learn More</button>
                 </div>
-            </div>
-            <div className="hero-right">
-                <img
-                    src="https://via.placeholder.com/300x400" /* Replace with your image URL */
-                    alt="Placeholder"
-                />
             </div>
         </section>
     );
