@@ -1,64 +1,84 @@
-/* Hero Section Styles */
 .hero {
-    background-color: #000; /* Black background */
-    color: #fff; /* White text */
-    height: 100vh; /* Full viewport height */
+    position: relative;
+    width: 100%;
+    height: 100vh;
+    background-size: cover;
+    background-position: center;
     display: flex;
+    justify-content: center;
     align-items: center;
+    color: white;
+    text-align: center;
+}
+
+.hero-content {
+    z-index: 2;
     padding: 2rem;
+    max-width: 800px;
+    background-color: rgba(0, 0, 0, 0.5); /* Semi-transparent background */
+    border-radius: 10px;
 }
 
-/* Left Section */
-.hero-left {
-    flex: 1; /* Take up equal space with right */
-    padding-right: 2rem;
-}
-
-.hero-left h1 {
+h1 {
     font-size: 3rem;
-    font-weight: bold;
     margin-bottom: 1rem;
-    color: #fff; /* Bold white text */
 }
 
-.hero-left p {
-    font-size: 1.2rem;
+p {
+    font-size: 1.5rem;
     margin-bottom: 2rem;
-    color: #ddd; /* Light gray for contrast */
 }
 
 .hero-buttons {
     display: flex;
-    gap: 1rem; /* Space between buttons */
+    justify-content: center;
+    gap: 1rem;
+}
+
+.btn-primary, .btn-secondary {
+    padding: 0.75rem 2rem;
+    font-size: 1rem;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
 }
 
 .btn-primary {
-    background-color: #ffd700; /* Gold-yellow background */
-    color: #000; /* Black text */
-    border: none;
-    padding: 0.7rem 1.5rem;
-    font-size: 1rem;
-    font-weight: bold;
-    border-radius: 5px;
-    cursor: pointer;
-    transition: background-color 0.3s ease, transform 0.2s ease;
+    background-color: #3498db;
+    color: white;
 }
 
 .btn-primary:hover {
-    background-color: #e5c100; /* Slightly darker gold on hover */
-    transform: scale(1.05); /* Slight zoom effect */
+    background-color: #2980b9;
 }
 
-/* Right Section */
-.hero-right {
-    flex: 1; /* Take up equal space with left */
-    display: flex;
-    justify-content: center;
-    align-items: center;
+.btn-secondary {
+    background-color: transparent;
+    color: white;
+    border: 2px solid white;
 }
 
-.hero-right img {
-    max-height: 400px; /* Adjust based on design */
-    width: auto;
-    border-radius: 10px; /* Optional rounded corners */
+.btn-secondary:hover {
+    background-color: white;
+    color: #3498db;
+}
+
+@media (max-width: 768px) {
+    .hero-content {
+        padding: 1.5rem;
+    }
+
+    h1 {
+        font-size: 2.5rem;
+    }
+
+    p {
+        font-size: 1.2rem;
+    }
+
+    .btn-primary, .btn-secondary {
+        padding: 0.5rem 1.5rem;
+        font-size: 0.9rem;
+    }
 }
